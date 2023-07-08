@@ -258,32 +258,38 @@ function esVocal(letra) {
   //Verificar si el usuario ingresó un string de más de un carácter y, en ese caso, informarle 
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   //Escribe tu código aquí
-  var letra2=letra.toLowerCase();
-  if(letra2)
+  if (typeof letra==='string'){
 
-  switch (letra2){
+    var vocales=letra.toLowerCase(letra);
+    var dos =vocales.length;
+      if (dos>1){
+        return "Dato incorrecto"
 
-    
-    case "a":
-      return "Es vocal";
-      break 
-    case "e":
-      return "Es vocal";
-      break 
-    case "i":
-      return "Es vocal";
-      break 
-    case "o":
-      return "Es vocal";
-      break 
-    case "u":
-      return "Es vocal";
-      break 
-      
-      default:
-        return "No es vocal";
+      }else {
+        switch (vocales){
+          case "a":
+            return "Es vocal";
+            break
+          case "e":
+            return "Es vocal";
+            break
+          case "i":
+            return "Es vocal";
+            break;
+          case "o":
+            return "Es vocal";
+            break;
+          case "u":
+            return "Es vocal";
+            break;
+            default :
+            return "No es vocal";
+        }
+
+      }
+  }else{
+    return "Ingrese un Dato Tipo String por Favor."
   }
-
 
 
 }
