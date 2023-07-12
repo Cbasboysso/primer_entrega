@@ -206,15 +206,29 @@ function esPrimo(numero) {
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
   // Tu código:
-   if (numero === 0|| numero === 1 || numero ===4){
-    return false
-   }
+  
+if(numero<=1){
+  return false;
+
+}for(let i = 2; i< numero; i ++) {
+  if (numero % i ===0){
+    return false;
+  }
+} return true;
+
+  }
 
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
   //Tu código:
+  let i=0;
+  do {
+    i+=1
+    numero=numero+5;
+  }while (i<8)
+  return numero;
 }
 
 // No modificar nada debajo de esta línea, sino no correrán los test.
