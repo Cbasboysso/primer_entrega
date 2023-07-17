@@ -65,7 +65,14 @@ return total;
 function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
-  // Tu código:
+  // Tu código: 
+  let comp=array.includes(elemento);
+  if (comp===true ){
+    return true;
+  }else{
+    return false;
+  }
+  
 
 }
 
@@ -73,23 +80,47 @@ function agregarNumeros(numeros) {
   // "array" debe ser una matriz de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  let total=0;
+  for (let i =0 ; i<numeros.length; i++) total+=numeros[i];
+  return total;
 }
 
 function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  let total=0;
+  let prom;
+  for (let i =0 ; i<resultadosTest.length; i++) total+=resultadosTest[i];
+  prom=total/resultadosTest.length;
+  return prom;
+
 }
 
 function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  var max=0;
+  for(let i =0; i<numeros.length; i++) {
+    if (numeros[i]>max){
+      max=numeros[i];
+    }
+  } return max;
 }
 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 19.
   //Escribe tu código aquí:
+ var cantidad;
+  for (let i=0; i<arreglo.length; i++) {
+    if (arreglo[i]>19)
+    {
+      cantidad=cantidad +1;
+    }
+    return cantidad;
+  } 
+
 }
 
 function diaDeLaSemana(numeroDeDia) {
