@@ -157,14 +157,18 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí:
-for ( let i = 0; i<arreglo.length ; i++){
-  for ( let x = 0 ; x < arreglo.length; x ++){
-  if ( arreglo[x]===arreglo[i]){
-    return true;
-  }else  if(arreglo[x]!=arreglo[i]){
-    return false;
-  }
-  }
+  let sumas=0;
+  let brreglo=arreglo;
+
+   for (let i =0; i<arreglo.length; i++ ){
+    if ( arreglo[i] === brreglo[i+1] && arreglo[0]===brreglo[brreglo.length-1]  && arreglo[arreglo.length-1] === brreglo[0]) {
+      sumas++
+    }
+   }
+if (sumas ===arreglo.length-1){
+  return true;
+}else {
+  return false;
 }
 
 } 
@@ -174,12 +178,40 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+ var nmeses=[];
+  for(let i=0; i<array.length; i++)
+  {
+        for(let x=0;x<3 ; x++)
+        {
+          if (array.includes("Enero") && array.includes("Marzo" )&& array.includes("Noviembre"))
+          {
+            nmeses[x]=array[array.indexOf("Marzo")]
+            nmeses[x+1]=array[array.indexOf("Noviembre")]
+            nmeses[x+2]=array[array.indexOf("Enero")];
+            return nmeses;
+          }else{
+            return "No se encontraron los meses pedidos"
+          }
+        }
+  }
+
 }
 
 function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+  let nnum=[];
+  var x=-1;
+for(let i=0; i<array.length; i++)
+{ 
+  if(array[i]>100)
+  { x++
+    
+    nnum[x]=array[i];
+}
+}
+return nnum;
 }
 
 // No modificar nada debajo de esta línea, de lo contrario no correrán los test.
