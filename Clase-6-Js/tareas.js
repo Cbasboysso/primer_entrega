@@ -55,7 +55,7 @@ function agregarStringInvertida() {
   }
 
 
-// ---------------------------------------------------------------------------//
+// ---------------------------------------------------------------------------// hmm
 //Crea el constructor de la clase "Persona"
 //Debe tener las propiedades: "nombre", "apellido", "edad" y "domicilio"
 //Debe tener un método llamado "detalle" que nos devuelve un objeto con las propiedades de la persona y sus valores.
